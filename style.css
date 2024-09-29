@@ -1,0 +1,274 @@
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin: 0;
+}
+
+body{
+    background-color: #1d0d47;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+}
+
+.header{
+    background-color: #1f0252;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header:hover{
+    box-shadow: 1px 2px 2px lightblue;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.logo{
+    color: white;
+    padding: 5px;
+    border-radius:10px;
+    box-shadow: 1px 2px 2px lightblue; 
+}
+
+.logo:hover{
+    color: lightblue;
+    text-shadow: 1px 2px 2px blue ;
+    box-shadow: 1px 2px 2px yellow;
+}
+
+.header__menu{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    gap: 2em; 
+}
+
+.header__link{
+    list-style: none;
+}
+
+.header__link a{
+    color:white;
+    text-decoration: none;
+}
+
+.header__link a:hover{
+     color: rgb(233, 166, 77);
+}
+
+.sign-up-button a{
+    color: white;
+    padding: 5px;
+    border-radius:10px;
+    text-decoration: none;
+    box-shadow: 1px 2px 2px lightblue; 
+}
+
+.sign-up-button a:hover{
+    color: lightblue;
+    text-shadow: 1px 2px 2px blue ;
+    box-shadow: 1px 2px 2px yellow;
+}
+
+.homePage{
+    position: relative;
+    overflow: hidden;
+    padding: 1px;
+    
+}
+
+.homePage img{
+    width: 100%;
+    height:  auto;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%, -20%); /* Adjust positioning */
+    color: white; 
+    font-size: 2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.LatestNews,.news, .Community{
+    color:white;
+}
+
+.content {
+    padding: 20px;
+    max-width: 1200px; /* Limit the width for better readability */
+    margin: 0 auto; /* Center the content */
+}
+
+.LatestNews, .Community {
+    margin: 20px 0; /* Spacing between sections */
+    padding: 15px;
+    background-color: #2a1a6d; /* Background for news and community sections */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.news {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #3a2a8a; /* Slightly different background for news items */
+    border-radius: 5px;
+}
+
+.news h2 {
+    margin: 0 0 10px; /* Space above and below the news title */
+}
+
+.news p {
+    line-height: 1.5; /* Improve readability */
+}
+
+.Community p {
+    line-height: 1.6; /* Improve readability */
+}
+b {
+    color: #ffcc00; /* Highlight important text */
+}
+
+.SignUp{
+    background-image: url(assests/ai-generated-8673996_640.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.Sign-up-form{
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    height: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Sign-up-form label{
+    align-self:  flex-start;
+    margin-bottom: 5px;
+}
+.Sign-up-form input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.Sign-up-form button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1f0252;
+    color: white;
+    cursor: pointer;
+}
+.Sign-up-form button:hover{
+    background-color: #6d0ba5d8;
+}
+.Services {
+    background-color: #2a2a72;
+    padding: 40px;
+    color: white;
+}
+
+.service {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+}
+
+.service h3 {
+    margin-bottom: 10px;
+}
+
+.Services a {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+.Services a:hover {
+    color: white;
+}
+.footer {
+    background-color: #1f0252;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__contact-details p,
+.footer__social-media a {
+    margin: 5px 0;
+}
+
+.footer__social-media {
+    margin-top: 15px;
+}
+
+.footer__social-media a {
+    margin: 0 10px;
+    color: lightblue;
+    text-decoration: none;
+}
+
+.footer__social-media a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+@media (min-width: 590px) {
+    .Sign-up-form{
+        width: 90%;
+    }
+    .navigation {
+       flex-direction: row; 
+       justify-content: space-between;
+       align-items: center;
+    }
+    .overlay-text{
+        font-size: 1.5em;
+    }
+}
+@media (max-width: 589px){
+    .sign-up-button{
+        margin-top: 5px;  
+    }
+    .logo{
+        margin-bottom: 10px;
+    }
+    .overlay-text{
+        font-size: 1em;
+    }
+}
